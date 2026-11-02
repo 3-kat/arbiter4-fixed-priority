@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.ext
+*.nodes
+*.sim
+*.al
+*.rawspice
+MAG*
+core

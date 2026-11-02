@@ -1,0 +1,65 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_VJT448 in circuit arbiter4 (0)(5 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_34VMYE in circuit arbiter4 (0)(14 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_WXVH9J in circuit arbiter4 (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_QKPZRQ in circuit arbiter4 (0)(3 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_EA3B65 in circuit arbiter4 (0)(4 instances)
+
+Subcircuit summary:
+Circuit 1: arbiter4                        |Circuit 2: arbiter4                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (14)               |sky130_fd_pr__pfet_01v8 (14)               
+sky130_fd_pr__nfet_01v8 (14)               |sky130_fd_pr__nfet_01v8 (14)               
+Number of devices: 28                      |Number of devices: 28                      
+Number of nets: 20                         |Number of nets: 20                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: arbiter4                        |Circuit 2: arbiter4                        
+-------------------------------------------|-------------------------------------------
+gnt3                                       |gnt3                                       
+gnt1                                       |gnt1                                       
+GND                                        |GND                                        
+req1                                       |req1                                       
+gnt0                                       |gnt0                                       
+req3                                       |req3                                       
+req0                                       |req0                                       
+req2                                       |req2                                       
+gnt2                                       |gnt2                                       
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes arbiter4 and arbiter4 are equivalent.
+
+Final result: Circuits match uniquely.
+.

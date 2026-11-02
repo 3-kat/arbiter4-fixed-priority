@@ -1,0 +1,31 @@
+* 4-request fixed-priority arbiter (generated, sky130A)
+.subckt arbiter4 req0 req1 req2 req3 gnt0 gnt1 gnt2 gnt3 VDD GND
+XMP1 nreq0 req0 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=2.0 nf=1 mult=1
+XMN1 nreq0 req0 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP2 gnt0 nreq0 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=2.0 nf=1 mult=1
+XMN2 gnt0 nreq0 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP3 nreq1 req1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=2.0 nf=1 mult=1
+XMN3 nreq1 req1 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP4 nreq2 req2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=2.0 nf=1 mult=1
+XMN4 nreq2 req2 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP5 nreq3 req3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=2.0 nf=1 mult=1
+XMN5 nreq3 req3 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP6 gnt1_p1 nreq1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4.0 nf=1 mult=1
+XMN6 gnt1 nreq1 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP7 gnt1 req0 gnt1_p1 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=4.0 nf=1 mult=1
+XMN7 gnt1 req0 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP8 gnt2_p1 nreq2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=6.0 nf=1 mult=1
+XMN8 gnt2 nreq2 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP9 gnt2_p2 req1 gnt2_p1 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=6.0 nf=1 mult=1
+XMN9 gnt2 req1 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP10 gnt2 req0 gnt2_p2 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=6.0 nf=1 mult=1
+XMN10 gnt2 req0 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP11 gnt3_p1 nreq3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=8.0 nf=1 mult=1
+XMN11 gnt3 nreq3 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP12 gnt3_p2 req2 gnt3_p1 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=8.0 nf=1 mult=1
+XMN12 gnt3 req2 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP13 gnt3_p3 req1 gnt3_p2 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=8.0 nf=1 mult=1
+XMN13 gnt3 req1 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+XMP14 gnt3 req0 gnt3_p3 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=8.0 nf=1 mult=1
+XMN14 gnt3 req0 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1.0 nf=1 mult=1
+.ends arbiter4

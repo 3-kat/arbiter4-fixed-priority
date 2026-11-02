@@ -1,0 +1,77 @@
+snap internal
+proc um {n} { return "[format %.3f [expr {$n * 0.005}]]um" }
+proc rp {layer x1 y1 x2 y2} { box values [um $x1] [um $y1] [um $x2] [um $y2]; paint $layer }
+load arbiter4
+rp viali -17 -274 17 -240
+rp viali -17 2015 17 2049
+rp viali 405 -274 439 -240
+rp viali 405 2015 439 2049
+rp viali 827 -274 861 -240
+rp viali 827 2015 861 2049
+rp viali 1249 -274 1283 -240
+rp viali 1249 2015 1283 2049
+rp viali 1671 -274 1705 -240
+rp viali 1671 2015 1705 2049
+rp viali 2093 -274 2127 -240
+rp viali 2093 2415 2127 2449
+rp viali 2515 -274 2549 -240
+rp viali 2515 2415 2549 2449
+rp viali 2937 -274 2971 -240
+rp viali 2937 2815 2971 2849
+rp viali 3359 -274 3393 -240
+rp viali 3359 2815 3393 2849
+rp viali 3781 -274 3815 -240
+rp viali 3781 2815 3815 2849
+rp viali 4203 -274 4237 -240
+rp viali 4203 3215 4237 3249
+rp viali 4625 -274 4659 -240
+rp viali 4625 3215 4659 3249
+rp viali 5047 -274 5081 -240
+rp viali 5047 3215 5081 3249
+rp viali 5469 -274 5503 -240
+rp viali 5469 3215 5503 3249
+rp metal1 -200 -310 5686 -222
+rp metal1 -200 3286 5686 3374
+rp metal1 57 -230 85 -60
+rp metal1 -29 2005 29 3326
+rp metal1 57 1806 85 3326
+rp metal1 479 -230 507 -60
+rp metal1 393 2005 451 3326
+rp metal1 479 1806 507 3326
+rp metal1 901 -230 929 -60
+rp metal1 815 2005 873 3326
+rp metal1 901 1806 929 3326
+rp metal1 1323 -230 1351 -60
+rp metal1 1237 2005 1295 3326
+rp metal1 1323 1806 1351 3326
+rp metal1 1745 -230 1773 -60
+rp metal1 1659 2005 1717 3326
+rp metal1 1745 1806 1773 3326
+rp metal1 2167 -230 2195 -60
+rp metal1 2081 2405 2139 3326
+rp metal1 2589 -230 2617 -60
+rp metal1 2503 2405 2561 3326
+rp metal1 2589 2206 2617 3326
+rp metal1 3011 -230 3039 -60
+rp metal1 2925 2805 2983 3326
+rp metal1 3433 -230 3461 -60
+rp metal1 3347 2805 3405 3326
+rp metal1 3855 -230 3883 -60
+rp metal1 3769 2805 3827 3326
+rp metal1 3855 2606 3883 3326
+rp metal1 4277 -230 4305 -60
+rp metal1 4191 3205 4249 3326
+rp metal1 4699 -230 4727 -60
+rp metal1 4613 3205 4671 3326
+rp metal1 5121 -230 5149 -60
+rp metal1 5035 3205 5093 3326
+rp metal1 5543 -230 5571 -60
+rp metal1 5457 3205 5515 3326
+rp metal1 5543 3006 5571 3326
+box values 0um 0um 0um 0um
+catch {view}
+save arbiter4
+drc check
+drc catchup
+puts "STAGE2 done. DRC count follows:"
+drc count

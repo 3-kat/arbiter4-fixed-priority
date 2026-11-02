@@ -1,0 +1,53 @@
+* NGSPICE file created from arbiter4.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_01v8_VJT448 B D S G
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.15
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_34VMYE B D S G
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_WXVH9J B D S G
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_QKPZRQ B D S G
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=1.74 pd=12.58 as=1.74 ps=12.58 w=6 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_EA3B65 B D S G
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=2.32 pd=16.58 as=2.32 ps=16.58 w=8 l=0.15
+.ends
+
+.subckt arbiter4 req0 req1 req2 gnt1 gnt2 gnt3 req3 gnt0 VDD GND
+XMP1 VDD MP2/G VDD req0 sky130_fd_pr__pfet_01v8_VJT448
+XMP2 VDD gnt0 VDD MP2/G sky130_fd_pr__pfet_01v8_VJT448
+XMP3 VDD MP7/G VDD req1 sky130_fd_pr__pfet_01v8_VJT448
+XMN1 GND MP2/G GND req0 sky130_fd_pr__nfet_01v8_34VMYE
+XMP4 VDD MP4/D VDD req2 sky130_fd_pr__pfet_01v8_VJT448
+XMN2 GND gnt0 GND MP2/G sky130_fd_pr__nfet_01v8_34VMYE
+XMP5 VDD MP5/D VDD req3 sky130_fd_pr__pfet_01v8_VJT448
+XMN3 GND MP7/G GND req1 sky130_fd_pr__nfet_01v8_34VMYE
+XMP6 VDD gnt1 MP7/D req0 sky130_fd_pr__pfet_01v8_WXVH9J
+XMN4 GND MP4/D GND req2 sky130_fd_pr__nfet_01v8_34VMYE
+XMP8 VDD gnt2 MP9/D req0 sky130_fd_pr__pfet_01v8_QKPZRQ
+XMP7 VDD MP7/D VDD MP7/G sky130_fd_pr__pfet_01v8_WXVH9J
+XMN6 GND gnt1 GND req0 sky130_fd_pr__nfet_01v8_34VMYE
+XMN5 GND MP5/D GND req3 sky130_fd_pr__nfet_01v8_34VMYE
+XMP9 VDD MP9/D MP9/S req1 sky130_fd_pr__pfet_01v8_QKPZRQ
+XMN7 GND gnt1 GND MP7/G sky130_fd_pr__nfet_01v8_34VMYE
+XMN8 GND gnt2 GND req0 sky130_fd_pr__nfet_01v8_34VMYE
+XMN9 GND gnt2 GND req1 sky130_fd_pr__nfet_01v8_34VMYE
+XMP10 VDD MP9/S VDD MP4/D sky130_fd_pr__pfet_01v8_QKPZRQ
+XMP11 VDD gnt3 MP12/D req0 sky130_fd_pr__pfet_01v8_EA3B65
+XMP12 VDD MP12/D MP13/D req1 sky130_fd_pr__pfet_01v8_EA3B65
+XMP13 VDD MP13/D MP14/D req2 sky130_fd_pr__pfet_01v8_EA3B65
+XMN10 GND gnt2 GND MP4/D sky130_fd_pr__nfet_01v8_34VMYE
+XMP14 VDD MP14/D VDD MP5/D sky130_fd_pr__pfet_01v8_EA3B65
+XMN11 GND gnt3 GND req0 sky130_fd_pr__nfet_01v8_34VMYE
+XMN12 GND gnt3 GND req1 sky130_fd_pr__nfet_01v8_34VMYE
+XMN13 GND gnt3 GND req2 sky130_fd_pr__nfet_01v8_34VMYE
+XMN14 GND gnt3 GND MP5/D sky130_fd_pr__nfet_01v8_34VMYE
+.ends
+

@@ -1,0 +1,20 @@
+* testbench for arbiter4
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include arbiter4_ref.spice
+Vdd VDD 0 1.8
+Vr0 req0 0 PULSE(0 1.8 0 100p 100p 0.5u 1u)
+Vr1 req1 0 PULSE(0 1.8 0 100p 100p 1u 2u)
+Vr2 req2 0 PULSE(0 1.8 0 100p 100p 2u 4u)
+Vr3 req3 0 PULSE(0 1.8 0 100p 100p 4u 8u)
+Xdut req0 req1 req2 req3 gnt0 gnt1 gnt2 gnt3 VDD GND arbiter4
+Cl0 gnt0 0 10f
+Cl1 gnt1 0 10f
+Cl2 gnt2 0 10f
+Cl3 gnt3 0 10f
+.tran 10n 8u
+.control
+run
+plot req0 req1+2 req2+4 req3+6 title "requests (offset)"
+plot gnt0 gnt1+2 gnt2+4 gnt3+6 title "grants (offset)"
+.endc
+.end

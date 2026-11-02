@@ -1,0 +1,67 @@
+snap internal
+proc um {n} { return "[format %.3f [expr {$n * 0.005}]]um" }
+proc rp {layer x1 y1 x2 y2} { box values [um $x1] [um $y1] [um $x2] [um $y2]; paint $layer }
+load arbiter4
+rp metal1 -114 -60 -62 1526
+rp metal1 308 -60 360 1526
+rp metal1 730 -60 782 1526
+rp metal1 1152 -60 1204 1526
+rp metal1 1574 -60 1626 1526
+rp metal1 1996 -60 2048 1526
+rp metal1 2418 -60 2470 984
+rp metal1 2840 -60 2892 1526
+rp metal1 3262 -60 3314 1074
+rp metal1 3684 -60 3736 1074
+rp metal1 4106 -60 4158 1526
+rp metal1 4528 -60 4580 1164
+rp metal1 4950 -60 5002 1164
+rp metal1 5372 -60 5424 1164
+rp metal2 -122 562 456 618
+rp metal2 -34 292 4254 348
+rp metal2 722 652 2566 708
+rp metal2 810 382 4676 438
+rp metal2 1144 742 3832 798
+rp metal2 1232 472 5098 528
+rp metal2 1566 832 5520 888
+rp metal2 1988 922 2478 978
+rp metal2 2832 1012 3744 1068
+rp metal2 4098 1102 5432 1158
+rp metal1 2150 1560 2492 1600
+rp metal1 2994 1560 3336 1600
+rp metal1 3416 1560 3758 1600
+rp metal1 4260 1560 4602 1600
+rp metal1 4682 1560 5024 1600
+rp metal1 5104 1560 5446 1600
+rp via1 -114 564 -62 616
+rp via1 396 564 448 616
+rp via1 -26 294 26 346
+rp via1 2084 294 2136 346
+rp via1 2928 294 2980 346
+rp via1 4194 294 4246 346
+rp via1 730 654 782 706
+rp via1 2506 654 2558 706
+rp via1 818 384 870 436
+rp via1 3350 384 3402 436
+rp via1 4616 384 4668 436
+rp via1 1152 744 1204 796
+rp via1 3772 744 3824 796
+rp via1 1240 474 1292 526
+rp via1 5038 474 5090 526
+rp via1 1574 834 1626 886
+rp via1 5460 834 5512 886
+rp via1 1996 924 2048 976
+rp via1 2418 924 2470 976
+rp via1 2840 1014 2892 1066
+rp via1 3262 1014 3314 1066
+rp via1 3684 1014 3736 1066
+rp via1 4106 1104 4158 1156
+rp via1 4528 1104 4580 1156
+rp via1 4950 1104 5002 1156
+rp via1 5372 1104 5424 1156
+box values 0um 0um 0um 0um
+catch {view}
+save arbiter4
+drc check
+drc catchup
+puts "STAGE3 done. DRC count follows:"
+drc count
