@@ -4,7 +4,7 @@ A complete **schematic → simulation → layout → DRC → LVS → GDS** flow 
 arbiter, built at transistor level (28 MOSFETs) with the open-source **IIC-OSIC-TOOLS** stack
 (Xschem, ngspice, Magic, Netgen, KLayout) on the **SkyWater sky130A** PDK.
 
-**Author:** YOUR NAME · **Course / Institution:** YOUR COURSE, YOUR INSTITUTION
+**Author:** Pennama Karthikeya · **Course / Institution:** Digital IC design,IIITDM Kurnool
 
 ![Final GDS in KLayout](docs/images/05_klayout_final_gds.png)
 *Final `arbiter4.gds` opened in KLayout: PMOS row on top, NMOS row at the bottom, ten metal2 buses in the channel between them.*
